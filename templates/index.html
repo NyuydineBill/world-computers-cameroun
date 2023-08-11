@@ -10,8 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>WORLD COMPUTERS CAMEROON</title>
-      <meta name="keywords" content="">
+<title>WWC</title>      <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
@@ -53,15 +52,23 @@
                                  <!-- <a href="index.html"><img src="images/logo.png" alt="#" /></a> -->
                               </div>
                            </div>
+                           
                         </div>
+                        
                      </div>
-                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="color: black;">
+                     
+                        
+               
+                     
+                     <div class="col-xl-12 col-lg-9 col-md-9 col-sm-9" style="color: black;">
                         <nav class="navigation navbar navbar-expand-md navbar-dark ">
                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                            <span class="navbar-toggler-icon"></span>
                            </button>
-                           <div class="collapse navbar-collapse" id="navbarsExample04" style="background-color: #87CEEB;">
+                           
+                           <div  class="collapse navbar-collapse" id="navbarsExample04" style="background-color: #87CEEB;">
                               <ul class="navbar-nav mr-auto">
+                                 
                                  
                                  <li class="nav-item">
                                     <a class="nav-link" style="color: black;" href="{% url 'index' %}"> Home  </a>
@@ -72,21 +79,29 @@
                                  <li class="nav-item">
                                     <a class="nav-link" href="{% url 'products' %}">Our Products</a>
                                  </li>
+                                 {% if user.is_authenticated %}
+                           <li class="nav-item">
+                              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                           </li>
+                           {% else %}
                                  <li class="nav-item">
                                     <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
                                  </li>
-                                 {% if user.is_authenticated %}
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                                 </li>
                                  {% endif %}
+                                 
+                                 
                               </ul>
+                              
                            </div>
                         </nav>
+                        <br>
+                        
                      </div>
                   </div>
                </div>
             </div>
+            <br>
+            
             <!-- end header inner -->
             <!-- end header -->
             <!-- banner -->
@@ -154,55 +169,55 @@
                      <div class="row">
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/dell d.jpg' %}" alt="#"/></figure>
-                              <h3>Computers</h3>
+                              <figure><img src="{% static 'images/dell d.jpg' %}" alt="#" style="height: 200px;"></figure>
+                              <h3 href="{% url 'products' %}">Computers</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/acer.jpg' %}" alt="#"/></figure>
+                              <figure><img src="{% static 'images/acer.jpg' %}" alt="#" style="height: 200px;"></figure>
                               <h3>Laptops</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/tablet.jpg' %}" alt="#"/></figure>
+                              <figure><img src="{% static 'images/tablet.jpg' %}" alt="#" style="height: 200px;"></figure>
                               <h3>Tablets</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/product4.png' %}" alt="#"/></figure>
+                              <figure><img src="{% static 'images/product4.png' %}" alt="#" style="height: 200px;"></figure>
                               <h3>Speakers</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/product5.png' %}" alt="#"/></figure>
-                              <h3>internet</h3>
+                              <figure><img src="{% static 'images/product5.png' %}" alt="#" style="height: 200px;"></figure>
+                              <h3>Internet</h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/product6.png' %}" alt="#"/></figure>
-                              <h3>Hard disk</h3>
+                              <figure><img src="{% static 'images/product6.png' %}" alt="#" style="height: 200px;"></figure>
+                              <h3>Hard Disk</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/product7.png' %}" alt="#"/></figure>
+                              <figure><img src="{% static 'images/product7.png' %}" alt="#" style="height: 200px;"></figure>
                               <h3>Rams</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/product8.png' %}" alt="#"/></figure>
+                              <figure><img src="{% static 'images/product8.png' %}" alt="#" style="height: 200px;"></figure>
                               <h3>Battery</h3>
                            </div>
                         </div>
                         <div class="col-md-4">
                            <div class="product_box">
-                              <figure><img src="{% static 'images/product9.png' %}" alt="#"/></figure>
+                              <figure><img src="{% static 'images/product9.png' %}" alt="#" style="height: 200px;"></figure>
                               <h3>Drive</h3>
                            </div>
                         </div>
@@ -213,8 +228,8 @@
                   </div>
                </div>
             </div>
-         </div>
-      </div>
+            </div>
+            </div>
       <center>
       <div class="row" style="position:relative; margin-right:0px;">
          <div class="col-md-8 offset-md-2 ">
@@ -308,80 +323,54 @@
          </div>   
           
        </div>
-      <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="cont_call">
-                        <h3> <strong class="multi"> Call Now</strong><br>
-                          <a href="tel:+237670387985"> +237 6 70 38 79 85</a>
-                        </h3>
-                     </div>
-                  </div>
+       <footer id="footer" class="footer">
+         <div class="container">
+           <div class="row gy-4">
+             <div class="col-lg-5 col-md-12 footer-info">
+               <a href="index.html" class="logo d-flex align-items-center">
+                 <span>WCC</span>
+               </a>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-12">
+               <center>
+                 <h4>Contact Us</h4>
+                 <p style="color:black">
+                   Ndobo <br>
+                   Bonaberi<br>
+                   Douala Cameroon <br><br>
+                   <strong>Phone:</strong> +237 6 70 38 79 85<br>
+                   <strong>Email:</strong> info@example.com<br>
+                 </p>
+               </center>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-12">
+               <center>
+                 <a href="https://www.facebook.com/profile.php?id=100076251794648" class="fa fa-facebook" style="border-radius: 20%;height:30px;width:20px; color:blue;">f</a>
+               </center>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-12">
+               <center>
+                 <a href="" class="scroll-top d-flex align-items-center justify-content-center">Back to top<i class="bi bi-arrow-up-short" style="color: white;"></i></a>
+               </center>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-lg-12">
+               <div class="container mt-4">
+                 <div class="copyright">
+                   &copy; <strong><span>WWC</span></strong>. 2023
+                 </div>
                </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     
-                     <!-- <div class="col-md-12"> -->
-                        <!-- <p>© 2019 All Rights Reserved. Design by <a href="https://html.design/"> Nyuydine Bill</a></p> -->
-                     <!-- </div> -->
-                  </div>
-               </div>
-            </div>
-         </div>
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-   <div class="container">
-     <div class="row gy-4">
-       <div class="col-lg-5 col-md-12 footer-info">
-         <a href="index.html" class="logo d-flex align-items-center">
-           <span>WCC</span>
-         </a>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-lg-12">
-         <center>
-           <h4>Contact Us</h4>
-           <p style="color:black">
-             Ndobo <br>
-             Bonaberi<br>
-             Douala Cameroon <br><br>
-             <strong>Phone:</strong> +237 6 70 38 79 85<br>
-             <strong>Email:</strong> info@example.com<br>
-           </p>
-         </center>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-lg-12">
-         <center>
-           <a href="https://www.facebook.com/profile.php?id=100076251794648" class="fa fa-facebook" style="border-radius: 20%;height:30px;width:20px;">f</a>
-         </center>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-lg-12">
-         <center>
-           <a href="" class="scroll-top d-flex align-items-center justify-content-center">Back to top<i class="bi bi-arrow-up-short" style="color: white;"></i></a>
-         </center>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-lg-12">
-         <div class="container mt-4">
-           <div class="copyright">
-             &copy; <strong><span>WWC</span></strong>. 2023
+             </div>
            </div>
          </div>
-       </div>
-     </div>
-   </div>
- </footer>
+       </footer>
  <!-- end footer -->
  <!-- Javascript files-->
  <script src="{% static 'js/jquery.min.js' %}"></script>

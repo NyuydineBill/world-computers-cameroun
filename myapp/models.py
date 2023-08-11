@@ -7,7 +7,7 @@ import datetime
 class Laptop(models.Model):
     name=models.CharField(max_length=50)
     price=models.CharField(max_length=150)
-    image=models.ImageField(upload_to='media', default='default.jpg',)
+    image1=models.ImageField(upload_to='media', default='default.jpg',)
     date=models.DateTimeField(auto_now=True)
     
     
