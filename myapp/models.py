@@ -7,6 +7,7 @@ import datetime
 class Laptop(models.Model):
     name=models.CharField(max_length=50)
     price=models.CharField(max_length=150)
+    description = models.TextField()
     image1=models.ImageField(upload_to='media', default='default.jpg',)
     date=models.DateTimeField(auto_now=True)
     
@@ -21,6 +22,7 @@ class Laptop(models.Model):
 class Desktop(models.Model):
     name=models.CharField(max_length=50)
     prices=models.CharField(max_length=150)
+    description = models.TextField()
     image=models.ImageField(upload_to='media', default='default.jpg',)
     date=models.DateTimeField(auto_now=True)
     
@@ -35,6 +37,7 @@ class Desktop(models.Model):
 class Monitor(models.Model):
     name=models.CharField(max_length=50)
     pricess=models.CharField(max_length=150)
+    description = models.TextField()
     image=models.ImageField(upload_to='media', default='default.jpg',)
     date=models.DateTimeField(auto_now=True)
     
@@ -49,6 +52,7 @@ class Monitor(models.Model):
 class SmartTV(models.Model):
     name=models.CharField(max_length=50)
     pricesss=models.CharField(max_length=150)
+    description = models.TextField()    
     image=models.ImageField(upload_to='media', default='default.jpg',)
     date=models.DateTimeField(auto_now=True)
     
@@ -62,6 +66,7 @@ class SmartTV(models.Model):
         verbose_name_plural = 'SmartTV'
 class Others(models.Model):
     name=models.CharField(max_length=50)
+    description = models.TextField()
     pricesx=models.CharField(max_length=150)
     image=models.ImageField(upload_to='media', default='default.jpg',)
     dates=models.DateTimeField(auto_now=True)
@@ -77,6 +82,7 @@ class Others(models.Model):
 class AllInOne(models.Model):
     name=models.CharField(max_length=50)
     pricex=models.CharField(max_length=150)
+    description = models.TextField()
     image=models.ImageField(upload_to='media', default='default.jpg',)
     date=models.DateTimeField(auto_now=True)
     
